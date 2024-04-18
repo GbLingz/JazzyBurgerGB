@@ -7,6 +7,7 @@ import SignIn from './auth/SignIn'
 import SignUp from './auth/SignUp'
 import { useState } from 'react';
 import Footer from './layout/Footer';
+import Error from './pages/Error';
 
 
 
@@ -19,14 +20,16 @@ function App() {
      
      <BrowserRouter>
     <Routes>
-      <Route element={<NavBar cartItem = {cartItem}/>}>
+      <Route element={<> <NavBar cartItem = {cartItem}/> <Footer/> </>}>
       <Route path='/' element = {<Home/>}/>
       <Route path='/checkOut' element = {<CheckOut/>}/>
-      <Route path='/Footer' element = {<Footer/>}/>
+      {/* <Route path='/Footer' element = {<Footer/>}/> */}
       </Route>
 
       <Route path='/SignUp' element = {<SignUp/>}/>
       <Route path='/SignIn' element = {<SignIn/>}/>
+      <Route path='*' element = {<Error/>}/>
+      
       
 
 

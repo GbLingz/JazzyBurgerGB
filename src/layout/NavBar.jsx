@@ -15,7 +15,7 @@ const NavBar = ({cartItem}) => {
   const [bagShow, setBagShow] = useState(false);
   return (
     <>
-      <main className="container posisition-relative">
+      <main className="container">
         <nav className="container d-flex justify-content-between align-items-center">
           {/* Section 1 */}
           <section className="d-flex justify-content-between align-items-center gap-3">
@@ -55,7 +55,7 @@ const NavBar = ({cartItem}) => {
               }
             >
               <img src={guestLogo} alt="guest-logo" />
-              <h5 className="d-none d-lg-block mt-3 text-info"> Hi, Guest </h5>
+              <h5 className="d-none d-lg-block mt-3"> Hi, Guest </h5>
               {!authShow ? (
                 <div className="d-none d-lg-block mt-3 text-secondary">
                   <GoChevronDown />
@@ -72,22 +72,17 @@ const NavBar = ({cartItem}) => {
 
             {/* div 2 */}
 
-            <div
-              onClick={() => (!bagShow ? setBagShow(true) : setBagShow(false))}
-            >
-              <div className="position-relative">
-                <div
-                  className="position-absolute top-0 start-100 translate-middle bg-danger text-light
-     rounded-circle w-75 text-center h-75 fw-bold"
-                >
-                  <p> {cartItem.length} </p>
+            <div className="d-flex align-items-center position-relative" role="button" 
+              onClick={() => !bagShow ? setBagShow(true) : setBagShow(false)}>
+                <div>
+                  <p className="position-absolute top-0 
+                  start-100 translate-middle bg-danger text-light rounded-circle text-center fw-bold px-1"> {cartItem.length} </p>
                 </div>
-                  <img role="button" src={cartLogo} alt="cart-logo" />
+                  <img src={cartLogo} alt="cart-logo" />
               </div>
-            </div>
+          <div className="postion-absolute"> {bagShow && <Bag />}</div>
           </section>
         </nav>
-        <div className="postion-absolute end-0"> {bagShow && <Bag />}</div>
         <Outlet />
       </main>
     </>

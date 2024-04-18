@@ -13,7 +13,7 @@ document.title = "Home | Page"
     <main className='container'>
       <Hero/>
       <Product/>
-      <Footer/>
+      
     </main>
 
     </>

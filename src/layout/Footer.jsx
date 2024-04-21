@@ -11,49 +11,61 @@ import instaLogo from '../assets/insta Logo.png'
 const Footer = () => {
   return (
   <>
-  <footer className= 'container bg-dark'>
-  <main className="container text-white py-5">
-    {/* section 1 */}
-<section className="d-lg-flex justify-content-between">
-  {/* Parent Div*/}
-<div className='flex-column-reverse flex-lg-row d-flex'>
-  {/* Div for 24/7  */}
-  <div className='d-lg-flex'> 
+  <footer className="bg-black">
+        <main className="text-white container py-5 text-center">
+          {/* section-1 */}
+          <section className="d-lg-flex justify-content-between ">
+              {/* parent div */}
+            <div className="flex-column-reverse flex-lg-row d-flex  mb-5">
+              {/* div for 24/7 text and logo */}
+              <div className="d-lg-flex">
 <img src= {QuestionLogo} alt="Secured-Logo"/>
-<h2>
-  24/7 <span> Support </span>
+<div className="">
+<h2 className="text-lg-center ms-2 fs-2  ">  24/7 
 </h2>
-  </div>
-  {/* div for 100 text and logo */}
-  <div className='d-lg-flex'>
+<p>Support</p>
+</div>
+</div>
+ {/* div for 100% text and logo */}
+ <div className="d-lg-flex justify-content-center align-items-center mx-5">
   <img src= {twoFourLogo} alt="247-logo"/>
-  <h2>
-    100% <br /> <span> Payment Secured</span>
-  </h2>
-  </div>
+  <div className="ms-1 ">
+                <h2 className="text-lg-center ">
+                  100% 
+                </h2>
+                <p>Payment Secured</p>
+                </div>
+              </div>
+            </div>
+
+ {/* parent div for apple and google logo */}
+ <div className="d-lg-flex gap-4">
+                {/* div for appleImg  */}
+                <div className="w-75 mx-auto mb-4">
+
+<img src= {AppStoreLogo} alt="Apps-Store" className="img-fluid" />
 </div>
-{/* parent div for apple and google logo */}
-<div className='d-lg-flex gap-4'>
-  {/* div for appleimg */}
-<div>
-<img src= {AppStoreLogo} alt="Apps-Store"/>
-</div>
-{/* div for googleimg */}
-<div>
-<img src= {PlayStoreLogo} alt="GooglePlay-Store" />
-</div>
-</div>
-</section>
+                {/* div for googleImg  */}
+                <div className="w-75 mx-auto">
+<img src= {PlayStoreLogo} alt="GooglePlay-Store" 
+className='img-fluid' />
+    </div>
+            </div>
+          </section>
+
 
 {/* <img src={footerLogo} alt="" /> */}
-    </main>
-    <h3 className='text-light mt-5'> Need Help</h3>
-    <p> <a href="#" class="text-white bg-dark"> 09064314570 or</a>  </p>
-    <p> <a href="#" class="text-white bg-dark">oshotekungbolahan@gmail.com</a> </p>
+          
+          {/* section-2 */}
+          <section className="text-lg-start ">
+            <h4>Need Help</h4>
+            <p><span className="text-decoration-underline fw-bold">+234 907 466 6655</span> <span>or</span></p> 
+            <p className="text-decoration-underline fw-bold">help@jazzysburger.com</p>
 
-    <h3 className='text-light mt-5'> FOLLOW US </h3>
+            <div>
+              <h3>FOLLOW US</h3>
 {/* Div for last footer */}
-<div className='d-flex mb-3 gap-3'>
+<div className='d-flex gap-3'>
     <div>
       <img src= {facebookLogo} alt="Facebook" />
     </div>
@@ -71,10 +83,12 @@ const Footer = () => {
     </div>
 
 </div>
-  </footer>
 
-  <p className="text-center">&copy; JJB Concepts <span className="fw-bolder fs-3"> . </span> Developed by our Digital LLC </p>
-  
+            </div>
+          </section>
+        </main>
+      </footer>
+      <p className="text-center">&copy; JJB Concepts <span className="fw-bolder fs-3 "> . </span> Developed by our Digital LLC </p>
   </>
   )
 }
